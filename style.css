@@ -1,4 +1,27 @@
-html {
-  height: 100%;
-  width: 100%;
+<style>
+
+body {
+  text-align: center;
+  background: black;
+  color: white; 
 }
+
+img {
+  border-radius: 12px;
+}
+
+  p {
+    font-style: italic;
+    font-size: 18px;
+  }
+
+  li {
+    font-style: italic;
+    line-height: 28px;
+  }
+
+  section {
+    line-height: 45px;
+  }
+</style>
+
