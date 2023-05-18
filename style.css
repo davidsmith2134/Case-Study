@@ -1,27 +1,48 @@
-<style>
-
+/* we do not need html tags in CSS files */
+/* <style> */
 body {
-  text-align: center;
   background: black;
-  color: white; 
+  color: white;
+  font-style: italic;
 }
 
-img {
-  border-radius: 12px;
+.splash-page {
+  height: 100vh;
+  display: flex;
 }
 
-  p {
-    font-style: italic;
-    font-size: 18px;
-  }
+.splash-image {
+  height: 100vh;
+  width: 50vw;
+  background-image: url("Habanero.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
-  li {
-    font-style: italic;
-    line-height: 28px;
-  }
+.splash-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50vw;
+  font-size: 20px;
+}
 
-  section {
-    line-height: 45px;
-  }
-</style>
+.big-text {
+  text-align: center;
+  font-size: 35px;
+}
 
+nav>ul {
+  display: flex;
+  justify-content: space-evenly;
+  /*! row-gap: 100px; */
+  /*! flex-direction: row; */
+  padding: 0;
+}
+
+nav>ul>li {
+  list-style-type: none;
+}
+
+/* </style> */
