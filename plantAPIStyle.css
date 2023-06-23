@@ -1,0 +1,395 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#assignment-title {
+  color: grey;
+  font-size: 1.8rem;
+}
+
+.italicize {
+  font-style: italic;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="file"] {
+  display: none;
+}
+
+.form-group .file-upload {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-group .file-upload:hover {
+  background-color: #ccc;
+}
+
+.form-group .file-upload input[type="file"] {
+  display: none;
+}
+
+.form-group .file-upload-label {
+  /*! margin-left: 10px; */
+  vertical-align: middle;
+}
+
+.form-group .PD-selected-files,
+.form-group .PHA-selected-files {
+  margin-top: 5px;
+}
+
+.form-group .PD-selected-files p,
+.form-group .PHA-selected-files p {
+  margin: 5px 0;
+}
+
+.form-group .PD-selected-files img,
+.form-group .PHA-selected-files img {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group .PD-selected-files .remove-image,
+.form-group .PHA-selected-files .remove-image {
+  color: red;
+  cursor: pointer;
+}
+
+.form-group .PD-selected-files .remove-image:hover,
+.form-group .PHA-selected-files .remove-image:hover {
+  text-decoration: underline;
+}
+
+.form-group .submit-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-group .submit-button:hover {
+  background-color: #45a049;
+}
+
+.image-container {
+  display: flex;
+
+}
+
+.preview-image {
+  width: 200px;
+}
+
+#plant-id-results,
+#plant-health-results {
+  max-width: 700px;
+  /*! padding: 0 1em; */
+  /* border-radius: 30px; */
+}
+
+#plant-id-results>.result,
+#plant-health-results>.result {
+  padding: 1rem 2rem;
+  background-color: #3e3e3e;
+}
+
+.plant-data,
+.code-description {
+  padding-left: 2rem;
+}
+
+.code-description {
+  /* margin-top: 0; */
+}
+
+.loading-screen {
+  text-align: center;
+}
+
+.loading-spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-visible {
+  display: block;
+}
+
+.loading-hidden {
+  display: none;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.not-a-plant>h3,
+.not-a-plant>span {
+  color: red;
+}
+
+/* CSS for the navigation menu */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.topnav a {
+  float: left;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  width: 50%;
+}
+
+.topnav a:hover {
+  background-color: #555;
+}
+
+.topnav a.active {
+  background-color: #fff;
+  color: #333;
+}
+
+/* CSS for the content divs */
+.content {
+  display: none;
+  padding: 20px;
+  /*! background-color: #fff; */
+  /*! box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); */
+}
+
+.content.active {
+  display: block;
+}
+
+#assignment-instructions {
+  margin: 0;
+  padding-left: 20px;
+}
+
+#assignment-instructions>li {
+  /* margin-bottom: 1rem; */
+  margin-bottom: 10px;
+}
+
+code {
+  background-color: var(--one-dark-pro-background);
+  color: var(--one-dark-pro-foreground);
+  font-family: Consolas, monospace;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+:root {
+  --one-dark-pro-background: #282c34;
+  --one-dark-pro-foreground: #abb2bf;
+  --one-dark-pro-selection: #3e4451;
+  --one-dark-pro-comment: #5c6370;
+  --one-dark-pro-cyan: #56b6c2;
+  --one-dark-pro-green: #98c379;
+  --one-dark-pro-orange: #d19a66;
+  --one-dark-pro-pink: #c678dd;
+  --one-dark-pro-purple: #c678dd;
+  --one-dark-pro-red: #e06c75;
+  --one-dark-pro-yellow: #e5c07b;
+  --one-dark-pro-blue: #61afef;
+}
+
+.code {
+  background-color: var(--one-dark-pro-background);
+  color: var(--one-dark-pro-foreground);
+  font-family: monospace;
+  padding: 20px;
+  overflow: auto;
+  resize: horizontal;
+}
+
+.comment {
+  color: var(--one-dark-pro-comment);
+}
+
+.keyword {
+  color: var(--one-dark-pro-purple);
+}
+
+.variable-name-declaration,
+.function-argument,
+.numeric-value {
+  color: var(--one-dark-pro-orange);
+}
+
+.string {
+  color: var(--one-dark-pro-green);
+}
+
+.function-name-declaration {}
+
+.object-function-name-call,
+.operator {
+  color: var(--one-dark-pro-blue);
+}
+
+.object-property {
+  color: var(--one-dark-pro-red);
+}
+
+.function-name-call,
+.object-property-declaration {
+  color: var(--one-dark-pro-cyan);
+}
+
+.class-name-declaration {
+  color: var(--one-dark-pro-yellow);
+}
+
+.plant-status {
+  padding-bottom: 1rem;
+}
+
+.plant-information,
+.health-assessment {
+  padding: 0 1rem;
+}
+
+.plant-information>p,
+.health-assessment>p {
+  padding-left: 1.5rem;
+}
+
+.possible-diseases>h3,
+.plant-status>h3 {
+  background-color: #6a98bb;
+  color: #313131;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+}
+
+.plant-status>h3:first-of-type {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.disease {
+  padding: 1rem;
+}
+
+.disease:nth-child(even) {
+  background-color: #353e36;
+}
+
+.disease:nth-child(odd) {
+  /*! background-color: #353739; */
+}
+
+.image-gallery {
+  display: flex
+}
+
+.image {
+  text-align: center;
+}
+
+.image>img {
+  width: 50%;
+}
+
+/* https://www.cssmatic.com/box-shadow */
+.card {
+  -webkit-box-shadow: 0px 7px 20px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 20px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 7px 20px 5px rgba(0, 0, 0, 0.75);
+  border-radius: 30px;
+  animation: animateBorderRadius 10s ease-in-out infinite;
+}
+
+@keyframes animateBorderRadius {
+  0% {
+      box-shadow: 0px 7px 20px 5px rgba(0, 0, 0, 0.75);
+
+  }
+
+  50% {
+     box-shadow: 0px 7px 10px 5px rgba(0, 0, 0, 0.55);
+
+    
+  }
+
+  100% {
+      box-shadow: 0px 7px 20px 5px rgba(0, 0, 0, 0.75);
+
+  }
+}
+.splash-page {
+  height: 10vh;
+}
+
+.splash-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  font-size: 20px;
+}
+
+nav>ul {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 0;
+}
+
+nav>ul>li {
+  list-style-type: none;
+}
+
+nav>ul>li>a {
+  text-align: center;
+}

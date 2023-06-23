@@ -6,6 +6,15 @@ body {
   font-style: italic;
 }
 
+p {
+  padding: 0 3rem;
+}
+
+h3 {
+  text-align: center;
+  padding-left: 17rem;
+}
+
 .splash-page {
   height: 100vh;
   display: flex;
@@ -14,9 +23,10 @@ body {
 .splash-image {
   height: 100vh;
   width: 50vw;
-  background-image: url("Habanero.jpg");
+  background-image: url(Habanero-Pepper.jpg.webp);
   background-size: cover;
   background-position: center;
+  border-radius: 50px;
 }
 
 .splash-text {
@@ -26,6 +36,7 @@ body {
   justify-content: space-between;
   width: 50vw;
   font-size: 20px;
+  color: orange;
 }
 
 .big-text {
@@ -45,4 +56,7 @@ nav>ul>li {
   list-style-type: none;
 }
 
+button {
+  
+}
 /* </style> */

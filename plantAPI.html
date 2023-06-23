@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ 
+<div class="splash-text">
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">Splash</a>
+            </li>
+            <li>
+              <a href="CaseStudy.html">Case Study</a>
+            </li>
+            <li>
+              <a href="AboutMe.html">About Me</a>
+            </li>
+          </ul>
+        </nav>
+        <div>
+  
+  <title>Plant Detection</title>
+  <meta name="color-scheme" content="dark light">
+  <link href="plantAPIStyle.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>World Tree of Knowledge:<br><span id="assignment-title">Looking Up Plants</span></h1>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+      <a class="active" id="example-tab">Plant Identification</a>
+      <a id="assignment-tab">Plant Health Assessment</a>
+    </div>
+
+    <!-- Example Content -->
+    <div id="example-content" class="content active">
+      <h2>Plant Detection Form</h2>
+      <p class="code-description">The code overall handles:</p>
+      <ul>
+        <li>Selecting certain pictures to identify a plant species.</li>
+        <li>Assessing Plant Health</li>
+        <li>Fufilling requests made by the user with data given.</li>
+        <li>Upload any picture of a plant and let the API do the work</li>
+      </ul>
+     
+
+      <form id="plant-detection-form" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="PD-image-upload">Upload Images:</label>
+          <div class="file-upload">
+            <label class="file-upload-label" for="PD-image-upload">Select Files</label>
+            <input type="file" id="PD-image-upload" name="images[]" multiple accept="image/*">
+          </div>
+          <div class="PD-selected-files"></div>
+        </div>
+        <div class="form-group">
+          <input type="submit" class="submit-button" value="Submit">
+        </div>
+      </form>
+
+      <div id="plant-id-results">
+        <div class="loading-screen loading-hidden">
+          <h2>LOADING</h2>
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------------------------------------------->
+    <!---------------------------------------------------------->
+    <!--------------      Assignment Content      -------------->
+    <!---------------------------------------------------------->
+    <!---------------------------------------------------------->
+    <div id="assignment-content" class="content">
+      <h2>Plant Health Assessment</h2>
+      <ol id="assignment-instructions">
+        <li>Obtain an API key from the Plant.ID API website. You can sign up for an API key at the <a
+            href="https://web.plant.id/plant-identification-api/" target="_blank">Plant.ID API</a> website.</li>
+        <li>Replace the empty <code>api_key</code> value in the JavaScript code with your obtained API key.</li>
+        <li>Implement the API request using the provided code. Use the <code>fetch</code> function or any other library
+          that allows making HTTP requests. Make a POST request to the API endpoint
+          <code>'https://api.plant.id/v2/health_assessment'</code> with the following details:
+          <ul>
+            <li>Set the <code>Content-Type</code> header to <code>'application/json'</code>.</li>
+            <li>Pass the <code>data</code> object, converted to a JSON string using <code>JSON.stringify()</code>, as
+              the request body.</li>
+          </ul>
+        </li>
+        <li>Handle the API response by parsing the returned data and updating the HTML page accordingly. Create HTML
+          elements dynamically using JavaScript and append them to the appropriate containers in the HTML structure.
+        </li>
+        <li>Implement error handling code inside the <code>catch</code> block to handle any errors that may occur during
+          the API request.</li>
+        <li>Customize the HTML structure and styles according to your requirements. Identify the appropriate HTML
+          elements and containers for displaying the API results.</li>
+        <li>Test the functionality by selecting multiple image files and submitting the form to trigger the API request.
+        </li>
+        <li>Optional: Implement additional features or enhancements to improve the user experience, such as displaying
+          loading animations, error messages, or handling the removal of selected images.</li>
+      </ol>
+      <form id="plant-health-assessment-form" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="PHA-image-upload">Upload Images:</label>
+          <div class="file-upload">
+            <label class="file-upload-label" for="PHA-image-upload">Select Files</label>
+            <input type="file" id="PHA-image-upload" name="images[]" multiple accept="image/*">
+          </div>
+          <div class="PHA-selected-files"></div>
+        </div>
+        <div class="form-group">
+          <input type="submit" class="submit-button" value="Submit">
+        </div>
+      </form>
+      <div id="plant-health-results">
+        <div class="loading-screen loading-hidden">
+          <h2>LOADING</h2>
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="plantAPISScript.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

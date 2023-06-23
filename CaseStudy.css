@@ -1,8 +1,22 @@
 body {
   text-align: center;
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   margin: 0;
+}
+
+p {
+  padding: 0 3rem;
+}
+
+h2 {
+  color: orange;
+  font-size: 3rem;
+  font-family: monospace;
+}
+
+h1 {
+  color: black;
 }
 
 img {
@@ -10,7 +24,7 @@ img {
 }
 
 p {
-  font-style: italic;
+  font-style: fantasy;
   font-size: 18px;
 }
 
@@ -22,6 +36,17 @@ li {
 section {
   line-height: 45px;
 }
+
+#challenges > p {
+  padding: 0 3rem;
+  margin: 0;
+  line-height: 2rem;
+}
+
+#challenges > h3 {
+  margin-bottom: 0;
+}
+
 
 .splash-page {
   height: 10vh;
